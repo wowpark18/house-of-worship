@@ -88,53 +88,65 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                {/* Mobile Menu Button */}
+                {/* Mobile Menu Button - Z-index higher than overlay to be clickable */}
                 <button
-                    className="md:hidden text-inherit"
+                    className="md:hidden text-inherit z-[70] relative w-10 h-10 flex items-center justify-center"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {isOpen ? <X size={24} /> : <Menu size={24} />}
+                    <div className={cn("transition-all duration-300 ease-in-out transform", isOpen ? "rotate-90 scale-110" : "rotate-0 scale-100")}>
+                        {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    </div>
                 </button>
             </div>
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="absolute top-0 left-0 w-full h-screen bg-white dark:bg-black p-6 flex flex-col items-center justify-center space-y-8 z-40 transition-opacity duration-300">
-                    <button className="absolute top-6 right-6" onClick={() => setIsOpen(false)}>
-                        <X size={32} />
-                    </button>
+                <div className="fixed inset-0 bg-black/95 backdrop-blur-2xl z-[60] flex flex-col items-center justify-center animate-in fade-in slide-in-from-top-4 duration-300">
 
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className="text-3xl font-bold hover:text-[var(--accent)]"
-                            onClick={() => setIsOpen(false)}
-                        >
-                            {link.name}
-                        </Link>
-                    ))}
-                    <a
-                        href={liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={cn(
-                            "px-8 py-3 rounded-full text-lg font-medium mt-4 flex items-center justify-center gap-2",
-                            liveVideoId ? "bg-red-600 text-white animate-pulse" : "bg-[var(--accent)] text-white"
-                        )}
-                    >
-                        {liveVideoId ? (
-                            <>
-                                <span className="relative flex h-3 w-3">
-                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                                    <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-                                </span>
-                                LIVE ON AIR
-                            </>
-                        ) : (
-                            "Online Worship"
-                        )}
-                    </a>
+                    {/* Decorative Background Text */}
+                    <div className="absolute top-32 text-center space-y-2 opacity-10 pointer-events-none select-none">
+                        <span className="block text-9xl font-black tracking-tighter text-white">HOW</span>
+                        <span className="block text-6xl font-black tracking-tighter text-white">CHURCH</span>
+                    </div>
+
+                    <div className="z-10 flex flex-col items-center space-y-8 text-center">
+                        <p className="text-xs font-medium tracking-[0.3em] text-gray-400 uppercase mb-4">
+                            2026 House Of Worship
+                        </p>
+
+                        {navLinks.map((link, idx) => (
+                            <Link
+                                key={link.name}
+                                href={link.href}
+                                className="text-4xl md:text-5xl font-bold text-white hover:text-[var(--accent)] transition-colors tracking-tight animate-in slide-in-from-bottom-4 fade-in fill-mode-forwards"
+                                style={{ animationDelay: `${idx * 100}ms` }}
+                                onClick={() => setIsOpen(false)}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+
+                        <div className="pt-8 w-full animate-in slide-in-from-bottom-4 fade-in fill-mode-forwards" style={{ animationDelay: '400ms' }}>
+                            <a
+                                href={liveLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={cn(
+                                    "px-10 py-4 rounded-full text-lg font-bold flex items-center justify-center gap-3 transition-all",
+                                    liveVideoId
+                                        ? "bg-red-600 text-white shadow-lg shadow-red-900/50 animate-pulse"
+                                        : "bg-[var(--accent)] text-white hover:bg-white hover:text-black"
+                                )}
+                            >
+                                {liveVideoId ? "LIVE ON AIR" : "Online Worship"}
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Bottom Info */}
+                    <div className="absolute bottom-12 text-gray-500 text-xs tracking-wider">
+                        BASED ON THE WORD
+                    </div>
                 </div>
             )}
         </nav>
