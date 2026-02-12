@@ -4,6 +4,7 @@ import { useState } from "react";
 
 export default function PrayerRequestForm() {
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     // 1. 구글 폼에서 '미리 채워진 링크 가져오기'를 통해 각 항목의 entry ID를 알아내세요.
     // 2. 구글 폼의 <form action="..."> URL을 가져오세요.
@@ -15,10 +16,12 @@ export default function PrayerRequestForm() {
     };
 
     const handleFormSubmit = () => {
+        setIsSubmitting(true);
         // 폼이 실제로 전송될 시간을 주기 위해 지연시킵니다.
         // 바로 상태를 바꾸면 폼이 사라져서 전송이 취소될 수 있습니다.
         setTimeout(() => {
             setSubmitted(true);
+            setIsSubmitting(false);
         }, 2000);
     };
 
@@ -84,9 +87,20 @@ export default function PrayerRequestForm() {
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-[var(--accent)] text-white py-3 rounded-lg font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-[var(--accent)] text-white py-3 rounded-lg font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-wait"
                 >
-                    기도 부탁하기
+                    {isSubmitting ? (
+                        <>
+                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            전송 중...
+                        </>
+                    ) : (
+                        "기도 부탁하기"
+                    )}
                 </button>
                 <p className="text-xs text-center text-gray-400">
                     * 전송된 내용은 구글 설문지에 안전하게 저장됩니다.
