@@ -13,7 +13,7 @@ export default function ShareButton({ title, text, url }: ShareButtonProps) {
     const [copied, setCopied] = useState(false);
 
     const checkMobileShare = () => {
-        if (typeof navigator !== "undefined" && navigator.share) {
+        if (typeof navigator !== "undefined" && typeof navigator.share === "function") {
             return true;
         }
         return false;
