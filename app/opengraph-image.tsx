@@ -42,7 +42,7 @@ export default async function Image() {
                 {/* Church Logo */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                    src="https://house-of-worship-orcin.vercel.app/how-logo-white.png"
+                    src="https://house-of-worship-orcin.vercel.app/logo.png"
                     width="200"
                     height="200"
                     alt="Logo"
