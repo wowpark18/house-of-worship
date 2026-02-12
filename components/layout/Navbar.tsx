@@ -101,7 +101,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="fixed inset-0 bg-black/95 backdrop-blur-2xl z-[60] flex flex-col justify-start pt-32 h-[100dvh] overflow-y-auto animate-in fade-in slide-in-from-top-4 duration-300">
+                <div className="fixed inset-0 bg-black z-[60] flex flex-col justify-start pt-32 h-[100dvh] overflow-y-auto animate-in fade-in duration-200">
 
                     {/* Decorative Background Text */}
                     <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center space-y-2 opacity-10 pointer-events-none select-none z-0">
