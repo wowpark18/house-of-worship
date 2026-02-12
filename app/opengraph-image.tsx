@@ -39,16 +39,15 @@ export default async function Image() {
                     }}
                 />
 
-                {/* Logo/Icon placeholder using SVG path directly to avoid external fetch dependency */}
-                <svg
-                    width="120"
-                    height="120"
-                    viewBox="0 0 24 24"
-                    fill="white"
-                    style={{ marginBottom: 40 }}
-                >
-                    <path d="M3 21h18v-2H3v2zm6-4h12v-2H9v2zm-6-4h18v-2H3v2zm6-4h12V7H9v2zM3 3v2h18V3H3z" />
-                </svg>
+                {/* Church Logo */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                    src="https://house-of-worship-orcin.vercel.app/how-logo-white.png"
+                    width="200"
+                    height="200"
+                    alt="Logo"
+                    style={{ marginBottom: 40, objectFit: 'contain' }}
+                />
 
                 <div style={{ fontSize: 80, fontWeight: 'bold', letterSpacing: '-0.02em', textAlign: 'center' }}>
                     HOUSE OF WORSHIP
