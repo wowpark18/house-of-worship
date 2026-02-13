@@ -34,15 +34,14 @@ export default function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-                scrolled
+                isOpen ? "bg-black" : (scrolled
                     ? "bg-black/90 backdrop-blur-md border-b border-white/10 shadow-sm"
-                    : "bg-gradient-to-b from-black/70 to-transparent border-b border-transparent"
+                    : "bg-gradient-to-b from-black/70 to-transparent border-b border-transparent")
             )}
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-inherit">
                 {/* Logo */}
-                {/* Logo */}
-                <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter group">
+                <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter group relative z-[70]">
                     <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform group-hover:scale-105">
                         <Image
                             src="/logo.png"
@@ -53,8 +52,8 @@ export default function Navbar() {
                             unoptimized
                         />
                     </div>
-                    <div className="w-[1px] h-6 bg-current/30"></div>
-                    <span>HOUSE OF WORSHIP CHURCH</span>
+                    {/* Separator removed */}
+                    <span className="hidden md:block">HOUSE OF WORSHIP CHURCH</span>
                 </Link>
 
                 {/* Desktop Menu */}
