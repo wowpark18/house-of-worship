@@ -1,0 +1,225 @@
+{
+  "kind": "youtube#playlistListResponse",
+  "etag": "-pWa-MMURJEqRg2IoK7mlw68SVU",
+  "pageInfo": {
+    "totalResults": 5,
+    "resultsPerPage": 50
+  },
+  "items": [
+    {
+      "kind": "youtube#playlist",
+      "etag": "8Cs6F79uGruD3auKwxQQYg-yJXg",
+      "id": "PLKlRRRsns8CAx43t9QRj3Cfxg9rLrnXzq",
+      "snippet": {
+        "publishedAt": "2026-01-31T11:01:58.641183Z",
+        "channelId": "UCCraM3Iz-rR6ZB2fRm0BvyQ",
+        "title": "설교요약",
+        "description": "주일 설교 요약 영상입니다.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Bfa61-JPaf8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Bfa61-JPaf8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Bfa61-JPaf8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Bfa61-JPaf8/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Bfa61-JPaf8/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "House of Worship",
+        "localized": {
+          "title": "설교요약",
+          "description": "주일 설교 요약 영상입니다."
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlist",
+      "etag": "IYuCyETT2zHiRM1XrmNbsNnbSCM",
+      "id": "PLKlRRRsns8CBw_VBYBTgqp102p-f9xZdk",
+      "snippet": {
+        "publishedAt": "2025-06-03T11:30:39.453692Z",
+        "channelId": "UCCraM3Iz-rR6ZB2fRm0BvyQ",
+        "title": "하우 행사",
+        "description": "교회 행사 영상",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Dyi_G_nPSZo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Dyi_G_nPSZo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Dyi_G_nPSZo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/Dyi_G_nPSZo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/Dyi_G_nPSZo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "House of Worship",
+        "localized": {
+          "title": "하우 행사",
+          "description": "교회 행사 영상"
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlist",
+      "etag": "Aqjzh8FYXaIxo-3iIfIXNweZzIQ",
+      "id": "PLKlRRRsns8CB3pP47aTi2MuWNBN-Ffj5E",
+      "snippet": {
+        "publishedAt": "2025-04-13T13:03:43.511278Z",
+        "channelId": "UCCraM3Iz-rR6ZB2fRm0BvyQ",
+        "title": "찬양 영상",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/MKrEOxC-0x0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/MKrEOxC-0x0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/MKrEOxC-0x0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/MKrEOxC-0x0/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/MKrEOxC-0x0/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "House of Worship",
+        "localized": {
+          "title": "찬양 영상",
+          "description": ""
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlist",
+      "etag": "w7zL-x35eyvOCkOBAAWV7nq72K0",
+      "id": "PLKlRRRsns8CB6IX3Bnh-zGYp_RvFw2zoa",
+      "snippet": {
+        "publishedAt": "2025-04-13T13:02:03.206402Z",
+        "channelId": "UCCraM3Iz-rR6ZB2fRm0BvyQ",
+        "title": "선교 영상",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/KU8Hj7Cp3bo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/KU8Hj7Cp3bo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/KU8Hj7Cp3bo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/KU8Hj7Cp3bo/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/KU8Hj7Cp3bo/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "House of Worship",
+        "localized": {
+          "title": "선교 영상",
+          "description": ""
+        }
+      }
+    },
+    {
+      "kind": "youtube#playlist",
+      "etag": "bsShuZ3zMAo6KscubVMO2Y4qnFM",
+      "id": "PLKlRRRsns8CCULFP0Wa-Bn-G5Hj9Xw_C4",
+      "snippet": {
+        "publishedAt": "2025-04-13T13:00:26.211062Z",
+        "channelId": "UCCraM3Iz-rR6ZB2fRm0BvyQ",
+        "title": "설교",
+        "description": "설교",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/VcINr3KUJlg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/VcINr3KUJlg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/VcINr3KUJlg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/VcINr3KUJlg/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/VcINr3KUJlg/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "House of Worship",
+        "localized": {
+          "title": "설교",
+          "description": "설교"
+        }
+      }
+    }
+  ]
+}

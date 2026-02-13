@@ -66,12 +66,13 @@ export const sermons: Sermon[] = [
 ];
 
 // Custom sort order for playlists
-const PLAYLIST_ORDER = ["설교", "설교요약", "찬양 영상", "하우 행사", "선교 영상"];
+const PLAYLIST_ORDER = ["설교", "설교요약", "찬양 영상", "하우 키즈 매일 성경", "하우 행사", "선교 영상"];
 
 export const mockPlaylists: Playlist[] = [
     { id: "mock-1", title: "설교", thumbnail: "", description: "주일 설교 말씀" },
     { id: "mock-2", title: "설교요약", thumbnail: "", description: "설교 핵심 요약" },
     { id: "mock-3", title: "찬양 영상", thumbnail: "", description: "예배 찬양 실황" },
+    { id: "PLKlRRRsns8CDsRdx0ntTQ2024A7UpkvSm", title: "하우 키즈 매일 성경", thumbnail: "", description: "어린이 매일 성경" },
     { id: "mock-4", title: "하우 행사", thumbnail: "", description: "교회 주요 행사" },
     { id: "mock-5", title: "선교 영상", thumbnail: "", description: "국내외 선교 현장" },
 ];
@@ -81,6 +82,23 @@ export async function getPlaylists(): Promise<Playlist[]> {
 
     if (playlists.length === 0) {
         playlists = mockPlaylists;
+    } else {
+        // Manually add unlisted/hidden playlists if they are missing
+        const hiddenPlaylists = [
+            {
+                id: "PLKlRRRsns8CDsRdx0ntTQ2024A7UpkvSm",
+                title: "하우 키즈 매일 성경",
+                thumbnail: "", // Will use default placeholder if empty
+                description: "어린이 매일 성경"
+            }
+        ];
+
+        // Add only if not already present
+        hiddenPlaylists.forEach(hidden => {
+            if (!playlists.find(p => p.id === hidden.id)) {
+                playlists.push(hidden);
+            }
+        });
     }
 
     // Sort playlists based on the defined order
