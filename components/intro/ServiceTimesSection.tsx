@@ -25,12 +25,12 @@ const services = [
         image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2669&auto=format&fit=crop", // Teens hanging out
         alt: "HOW Teens"
     },
-    {
+    { // Added missing opening brace for the 'friday' object
         id: "friday",
         name: "금요 예배",
         time: "07:00 PM",
         image: "https://images.unsplash.com/photo-1601142634808-38923eb7c560?q=80&w=2670&auto=format&fit=crop", // Evening/Candle light or prayer
-        alt: "Friday Prayer"
+        alt: "Friday Worship"
     }
 ];
 

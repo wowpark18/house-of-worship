@@ -13,7 +13,7 @@ export default function LocationSection() {
             mapSrc: "https://maps.google.com/maps?q=18C%20Horizon%20Ave%2C%20Cameron%20Park%20NSW%202285&t=&z=15&ie=UTF8&iwloc=&output=embed"
         },
         friday: {
-            title: "금요 기도회",
+            title: "금요 예배",
             address: "4 Thistle Way, Fletcher NSW 2287",
             mapSrc: "https://maps.google.com/maps?q=4%20Thistle%20Way%2C%20Fletcher%20NSW%202287&t=&z=15&ie=UTF8&iwloc=&output=embed"
         }
@@ -45,7 +45,7 @@ export default function LocationSection() {
                             : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
                             }`}
                     >
-                        금요 기도회
+                        금요 예배
                     </button>
                 </div>
 
