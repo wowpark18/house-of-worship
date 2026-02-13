@@ -52,8 +52,10 @@ export default function Navbar() {
                             unoptimized
                         />
                     </div>
-                    {/* Separator removed */}
-                    <div className="hidden md:flex flex-col items-end leading-none">
+
+                    <div className="w-[1px] h-10 bg-current/30 hidden md:block"></div>
+
+                    <div className="hidden md:flex flex-col items-start leading-none">
                         <span>HOUSE OF WORSHIP</span>
                         <span className="text-xl">CHURCH</span>
                     </div>
