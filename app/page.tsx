@@ -9,7 +9,7 @@ export default function Home() {
       <section className="relative h-screen flex flex-col items-center justify-center bg-black text-white overflow-hidden">
         {/* Simplified Background Gradient simulating video overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/80 z-10" />
-        <div className="absolute inset-0 bg-[url('/main-bg.png')] bg-cover bg-center opacity-60 z-0 animate-pulse-slow"></div>
+        <div className="absolute inset-0 bg-[url('/main-bg.png')] bg-cover bg-center bg-fixed opacity-60 z-0"></div>
 
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto space-y-8">
           <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] uppercase text-gray-300">
