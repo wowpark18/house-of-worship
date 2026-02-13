@@ -34,7 +34,9 @@ export default function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-                "bg-black border-b border-white/10 text-white shadow-sm"
+                scrolled
+                    ? "bg-black/90 backdrop-blur-md border-b border-white/10 shadow-sm"
+                    : "bg-gradient-to-b from-black/70 to-transparent border-b border-transparent"
             )}
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-inherit">
