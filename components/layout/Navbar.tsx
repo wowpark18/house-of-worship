@@ -39,8 +39,9 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-inherit">
                 {/* Logo */}
-                <Link href="/" className="flex items-end gap-0 text-2xl font-bold tracking-tighter group pb-1">
-                    <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform group-hover:scale-105 -mb-2">
+                {/* Logo */}
+                <Link href="/" className="flex items-center gap-2 text-2xl font-bold tracking-tighter group">
+                    <div className="relative w-16 h-16 md:w-20 md:h-20 transition-transform group-hover:scale-105">
                         <Image
                             src="/logo.png"
                             alt="House Of Worship Logo"
@@ -50,7 +51,7 @@ export default function Navbar() {
                             unoptimized
                         />
                     </div>
-                    <div className="w-[1px] h-5 bg-current/30 mx-2 mb-2"></div>
+                    <div className="w-[1px] h-6 bg-current/30"></div>
                     <span>HOUSE OF WORSHIP CHURCH</span>
                 </Link>
 
