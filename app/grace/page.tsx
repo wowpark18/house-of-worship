@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function GracePage() {
     return (
-        <div className="pt-24 min-h-screen bg-white dark:bg-black px-6 pb-20">
+        <div className="pt-32 min-h-screen bg-white dark:bg-black px-6 pb-20">
             <div className="max-w-7xl mx-auto">
 
                 <header className="mb-16 text-center space-y-4">

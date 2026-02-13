@@ -14,7 +14,7 @@ export default function LifePage() {
     ];
 
     return (
-        <div className="pt-24 min-h-screen bg-gray-50 dark:bg-black pb-20 px-6">
+        <div className="pt-32 min-h-screen bg-gray-50 dark:bg-black pb-20 px-6">
             <div className="max-w-7xl mx-auto">
 
                 {/* Header */}

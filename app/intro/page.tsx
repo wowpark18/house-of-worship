@@ -8,7 +8,7 @@ export const metadata = {
 
 export default function IntroPage() {
     return (
-        <div className="pt-24 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100 pb-20">
+        <div className="pt-32 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100 pb-20">
 
             {/* Hero / Vision */}
             <section className="max-w-4xl mx-auto px-6 mb-24 text-center">

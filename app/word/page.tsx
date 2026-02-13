@@ -17,7 +17,7 @@ export default async function WordPage({ searchParams }: { searchParams: Promise
     ]);
 
     return (
-        <div className="pt-24 min-h-screen bg-gray-50 dark:bg-black px-6 pb-20">
+        <div className="pt-32 min-h-screen bg-gray-50 dark:bg-black px-6 pb-20">
             <div className="max-w-7xl mx-auto">
                 <header className="mb-12 text-center space-y-4">
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight">The Word</h1>
