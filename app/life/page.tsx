@@ -24,13 +24,7 @@ export default function LifePage() {
                         "두세 사람이 내 이름으로 모인 곳에는 나도 그들 중에 있느니라" (마 18:20)<br />
                         함께 울고 함께 웃는, 진짜 가족이 되어주세요.
                     </p>
-                    <div className="pt-6">
-                        <Link href="/life/new-family">
-                            <button className="px-8 py-3 bg-[var(--accent)] text-white rounded-full font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">
-                                새가족 등록 신청
-                            </button>
-                        </Link>
-                    </div>
+
                 </header>
 
                 {/* Small Groups Grid */}
