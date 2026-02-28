@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://house-of-worship-orcin.vercel.app"),
+  metadataBase: new URL("https://www.howchurch.com.au"),
   title: "House Of Worship Church",
-  description: "2026 Hybrid Minimalism Church - Return to Basic",
+  description: "다윗의 장막과 같은 하나님의 임재를 갈망하는 예배의 집.",
   openGraph: {
     title: "House Of Worship Church",
-    description: "본질로의 회귀. 말씀과 공동체에 집중하는 곳.",
-    url: "https://house-of-worship-orcin.vercel.app",
+    description: "다윗의 장막과 같은 하나님의 임재를 갈망하는 예배의 집.",
+    url: "https://www.howchurch.com.au",
     siteName: "House Of Worship",
     locale: "ko_KR",
     type: "website",
