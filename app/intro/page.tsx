@@ -18,15 +18,14 @@ export default function IntroPage() {
             {/* Hero / Vision */}
             <section className="max-w-4xl mx-auto px-6 mb-24 text-center">
                 <span className="text-[var(--accent)] font-medium tracking-widest text-xs uppercase mb-4 block">Our Vision</span>
-                <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                    교회의 본질은<br className="md:hidden" /> 건물이 아니라 <br />
-                    <span className="relative inline-block">
-                        사람<span className="absolute bottom-1 left-0 w-full h-3 bg-[var(--accent)]/30 -z-10"></span>
-                    </span>입니다.
+                <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight break-keep">
+                    House of Worship은 <br className="md:hidden" />
+                    '<span className="relative inline-block">
+                        예배의 집<span className="absolute bottom-1 left-0 w-full h-3 bg-[var(--accent)]/30 -z-10"></span>
+                    </span>'이란 뜻으로
                 </h1>
-                <p className="text-xl text-gray-500 dark:text-gray-400 font-light leading-relaxed max-w-2xl mx-auto">
-                    House Of Worship은 화려한 시스템보다 한 사람의 예배자를 세우는 일에 집중합니다.
-                    우리는 다시 기본으로 돌아가(Return to Basic), 말씀과 삶이 일치하는 공동체를 꿈꿉니다.
+                <p className="text-xl text-gray-500 dark:text-gray-400 font-light leading-relaxed max-w-2xl mx-auto break-keep">
+                    각 사람들의 마음에 다윗의 장막과 같은 하나님의 임재를 갈망하는 예배의 집이 세워지며, 마지막 때에 주님이 다시 오심을 예비하는 예배자들을 세워지기를 소망하는 교회입니다.
                 </p>
             </section>
 
