@@ -13,10 +13,10 @@ export default function Home() {
 
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto space-y-8">
           <h2 className="text-xl md:text-2xl font-light tracking-[0.2em] uppercase text-gray-300">
-            2026 House Of Worship
+            2026 HOW MINISTRY
           </h2>
           <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-tight">
-            Church to <br />
+            House Of <br />
             <span className="text-[var(--accent)]">Worship</span>.
           </h1>
           <p className="text-lg md:text-xl font-light text-gray-300 max-w-2xl mx-auto">
