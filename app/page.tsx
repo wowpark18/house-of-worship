@@ -20,7 +20,7 @@ export default function Home() {
             <span className="text-[var(--accent)]">Worship</span>.
           </h1>
           <p className="text-lg md:text-xl font-light text-gray-300 max-w-2xl mx-auto">
-            본질로의 회귀. 말씀과 공동체에 집중하는 곳.
+            다윗의 장막과 같은 하나님의 임재를 갈망하는 예배의 집.
           </p>
 
           <div className="pt-8 flex flex-col md:flex-row gap-4 justify-center">
