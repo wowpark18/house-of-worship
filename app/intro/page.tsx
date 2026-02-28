@@ -17,7 +17,6 @@ export default function IntroPage() {
 
             {/* Hero / Vision */}
             <section className="max-w-4xl mx-auto px-6 mb-24 text-center">
-                <span className="text-[var(--accent)] font-medium tracking-widest text-xs uppercase mb-4 block">Our Vision</span>
                 <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight break-keep">
                     <span className="text-[var(--accent)] font-extrabold">House of Worship</span>은 <br />
                     '<span className="relative inline-block text-[var(--accent)] font-extrabold">
