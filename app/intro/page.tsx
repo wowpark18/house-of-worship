@@ -10,6 +10,11 @@ export default function IntroPage() {
     return (
         <div className="pt-32 min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100 pb-20">
 
+            {/* Page Header */}
+            <header className="mb-16 text-center space-y-4">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Intro</h1>
+            </header>
+
             {/* Hero / Vision */}
             <section className="max-w-4xl mx-auto px-6 mb-24 text-center">
                 <span className="text-[var(--accent)] font-medium tracking-widest text-xs uppercase mb-4 block">Our Vision</span>

@@ -12,7 +12,7 @@ export default function GracePage() {
             <div className="max-w-7xl mx-auto">
 
                 <header className="mb-16 text-center space-y-4">
-                    <h1 className="text-4xl md:text-6xl font-serif italic font-bold tracking-tight">Grace Only</h1>
+                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight">Grace Only</h1>
                     <p className="text-gray-500 dark:text-gray-400 text-lg">
                         은혜 아니면 살아갈 수가 없네.
                     </p>
