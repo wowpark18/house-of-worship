@@ -19,8 +19,8 @@ export default function IntroPage() {
             <section className="max-w-4xl mx-auto px-6 mb-24 text-center">
                 <span className="text-[var(--accent)] font-medium tracking-widest text-xs uppercase mb-4 block">Our Vision</span>
                 <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight break-keep">
-                    House of Worship은 <br />
-                    '<span className="relative inline-block">
+                    <span className="text-[var(--accent)] font-extrabold">House of Worship</span>은 <br />
+                    '<span className="relative inline-block text-[var(--accent)] font-extrabold">
                         예배의 집<span className="absolute bottom-1 left-0 w-full h-3 bg-[var(--accent)]/30 -z-10"></span>
                     </span>'이란 뜻으로
                 </h1>
