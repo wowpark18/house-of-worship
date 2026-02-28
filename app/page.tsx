@@ -27,9 +27,7 @@ export default function Home() {
             <Link href="/word" className="px-8 py-3 bg-[var(--accent)] text-white rounded-full font-medium hover:bg-white hover:text-black transition-all flex items-center justify-center gap-2">
               <Play size={18} fill="currentColor" /> 주일설교 듣기
             </Link>
-            <Link href="/life" className="px-8 py-3 border border-white/30 text-white rounded-full font-medium hover:bg-white/10 transition-all">
-              새가족 등록
-            </Link>
+
           </div>
         </div>
 
