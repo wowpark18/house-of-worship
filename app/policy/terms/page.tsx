@@ -21,7 +21,7 @@ export default function TermsPage() {
                     </p>
 
                     <hr className="border-white/10 my-12" />
-                    <p className="text-sm">문의: howministry2019@gmail.com</p>
+                    <p className="text-sm">문의: admin@howchurch.com.au</p>
                 </div>
             </div>
         </div>

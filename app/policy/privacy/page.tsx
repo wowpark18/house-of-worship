@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
                     <p>개인정보 수집 및 이용목적이 달성된 후에는 해당 정보를 지체 없이 파기합니다.</p>
 
                     <hr className="border-white/10 my-12" />
-                    <p className="text-sm">문의: howministry2019@gmail.com</p>
+                    <p className="text-sm">문의: admin@howchurch.com.au</p>
                 </div>
             </div>
         </div>

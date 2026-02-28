@@ -126,7 +126,7 @@ export default function Home() {
             </div>
             <p className="text-gray-400 text-sm">
               18C Horizon Ave, Cameron Park NSW 2285<br />
-              Email: howministry2019@gmail.com
+              Email: admin@howchurch.com.au
             </p>
           </div>
           <div className="text-gray-400 text-sm flex gap-6">

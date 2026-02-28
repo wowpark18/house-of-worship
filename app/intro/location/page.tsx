@@ -16,8 +16,8 @@ export default function LocationPage() {
 
                         <div className="pt-8 space-y-4">
                             <h3 className="text-xl font-semibold">이메일 문의</h3>
-                            <a href="mailto:howministry2019@gmail.com" className="text-gray-400 hover:text-white transition-colors">
-                                howministry2019@gmail.com
+                            <a href="mailto:admin@howchurch.com.au" className="text-gray-400 hover:text-white transition-colors">
+                                admin@howchurch.com.au
                             </a>
                         </div>
 
