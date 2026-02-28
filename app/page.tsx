@@ -16,8 +16,8 @@ export default function Home() {
             2026 House Of Worship
           </h2>
           <h1 className="text-5xl md:text-8xl font-bold tracking-tight leading-tight">
-            Return to <br />
-            <span className="text-[var(--accent)]">Basic</span>.
+            Church to <br />
+            <span className="text-[var(--accent)]">Worship</span>.
           </h1>
           <p className="text-lg md:text-xl font-light text-gray-300 max-w-2xl mx-auto">
             본질로의 회귀. 말씀과 공동체에 집중하는 곳.
