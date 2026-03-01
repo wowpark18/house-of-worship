@@ -52,8 +52,14 @@ export default function IntroPage() {
                                     <span className="w-8 h-px bg-[var(--accent)] inline-block"></span>
                                     담임 목사
                                 </h3>
-                                <div className="text-gray-600 dark:text-gray-400 space-y-2">
+                                <div className="space-y-4">
                                     <p className="font-bold text-gray-900 dark:text-gray-100 text-3xl">최강현</p>
+                                    <div className="text-gray-500 dark:text-gray-400 space-y-2 text-[15px] leading-relaxed break-keep">
+                                        <p>할렐루야!<br />
+                                            &quot;House of Worship Church&quot; 홈페이지를 방문하신 여러분을 환영합니다.</p>
+                                        <p>우리 &quot;HOW&quot;는 이 시대 하나님의 임재를 갈망하며 예배하는 다윗의 장막과 같은 교회가 되기 위해 부르셨습니다. 또한 우리에게 주신 사명을 따라 하나님의 나라를 확장하며, 주님 다시오심을 기다리며 예비하는 교회가 되기를 소망합니다.</p>
+                                        <p>우리 교회를 통하여 예수 그리스도를 만나 참된 평안과 자유를 누리시며 예배의 기쁨을 회복하시기를 바랍니다.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
