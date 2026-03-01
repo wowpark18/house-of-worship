@@ -53,7 +53,7 @@ export default function IntroPage() {
                                     담임 목사
                                 </h3>
                                 <div className="text-gray-600 dark:text-gray-400 space-y-2">
-                                    <p className="font-bold text-gray-900 dark:text-gray-100 text-lg">최강현 목사</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-100 text-3xl">최강현</p>
                                 </div>
                             </div>
                         </div>
