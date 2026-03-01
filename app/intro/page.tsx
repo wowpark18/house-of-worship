@@ -40,8 +40,7 @@ export default function IntroPage() {
                                 소속 교단
                             </h3>
                             <div className="text-gray-600 dark:text-gray-400 space-y-2">
-                                <p>[여기에 소속 교단 정보가 들어갑니다]</p>
-                                <p className="text-sm opacity-70">예: 대한예수교장로회(합동), 독립교단 등</p>
+                                <p className="break-keep">기독교 대한 하나님의 성회(여의도 총회) 호주지회(KACA) 소속 교회</p>
                             </div>
                         </div>
 
@@ -55,13 +54,28 @@ export default function IntroPage() {
                                 <ul className="space-y-4 relative border-l-2 border-gray-200 dark:border-zinc-700 ml-4">
                                     <li className="pl-6 relative">
                                         <div className="absolute w-3 h-3 bg-[var(--accent)] rounded-full -left-[7px] top-1.5 outline outline-4 outline-gray-50 dark:outline-zinc-900"></div>
-                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1">202X. XX. XX</span>
-                                        <span className="text-sm">교회 설립 등 주요 연혁 입력</span>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2018. 04. 30</span>
+                                        <span className="text-sm break-keep">House of Worship in WA 예배시작</span>
                                     </li>
-                                    <li className="pl-6 relative opacity-70">
+                                    <li className="pl-6 relative">
                                         <div className="absolute w-3 h-3 bg-gray-300 dark:bg-zinc-600 rounded-full -left-[7px] top-1.5"></div>
-                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1">...</span>
-                                        <span className="text-sm">추가 내용 입력칸</span>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2019. 09.</span>
+                                        <span className="text-sm break-keep">House of Worship in NSW 예배시작</span>
+                                    </li>
+                                    <li className="pl-6 relative">
+                                        <div className="absolute w-3 h-3 bg-gray-300 dark:bg-zinc-600 rounded-full -left-[7px] top-1.5"></div>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2020. 08. 20</span>
+                                        <span className="text-sm break-keep">House of Worship Ministry incorporate 등록</span>
+                                    </li>
+                                    <li className="pl-6 relative">
+                                        <div className="absolute w-3 h-3 bg-gray-300 dark:bg-zinc-600 rounded-full -left-[7px] top-1.5"></div>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2021. 03.</span>
+                                        <span className="text-sm break-keep">기독교 대한 하나님의 성회(여의도 총회) 호주지회 (KAOGA)</span>
+                                    </li>
+                                    <li className="pl-6 relative">
+                                        <div className="absolute w-3 h-3 bg-gray-300 dark:bg-zinc-600 rounded-full -left-[7px] top-1.5"></div>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2021. 03. 27</span>
+                                        <span className="text-sm break-keep">House of Worship Church 창립예배</span>
                                     </li>
                                 </ul>
                             </div>
