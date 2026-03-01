@@ -33,14 +33,28 @@ export default function IntroPage() {
                 <div className="bg-gray-50 dark:bg-zinc-900 rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-zinc-800">
                     <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-[var(--accent)]">About Church</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        {/* Denomination */}
-                        <div>
-                            <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                                <span className="w-8 h-px bg-[var(--accent)] inline-block"></span>
-                                소속 교단
-                            </h3>
-                            <div className="text-gray-600 dark:text-gray-400 space-y-2">
-                                <p className="break-keep">기독교 대한 하나님의 성회(여의도 총회) 호주지회(KACA) 소속 교회</p>
+                        {/* Denomination & Pastor */}
+                        <div className="space-y-12">
+                            {/* Denomination */}
+                            <div>
+                                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                                    <span className="w-8 h-px bg-[var(--accent)] inline-block"></span>
+                                    소속 교단
+                                </h3>
+                                <div className="text-gray-600 dark:text-gray-400 space-y-2">
+                                    <p className="break-keep">기독교 대한 하나님의 성회(여의도 총회) 호주지회(KACA) 소속 교회</p>
+                                </div>
+                            </div>
+
+                            {/* Pastor */}
+                            <div>
+                                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                                    <span className="w-8 h-px bg-[var(--accent)] inline-block"></span>
+                                    담임 목사
+                                </h3>
+                                <div className="text-gray-600 dark:text-gray-400 space-y-2">
+                                    <p className="font-bold text-gray-900 dark:text-gray-100 text-lg">최강현 목사</p>
+                                </div>
                             </div>
                         </div>
 
