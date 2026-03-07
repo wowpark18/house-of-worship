@@ -39,7 +39,7 @@ export default function Navbar() {
                     : "bg-gradient-to-b from-black/70 to-transparent border-none")
             )}
         >
-            <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-inherit">
+            <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-white">
                 {/* Logo */}
                 <Link href="/" className="flex items-end gap-3 text-2xl font-bold tracking-tighter group relative z-[70]">
                     <div className="relative w-12 h-12 md:w-16 md:h-16 transition-transform group-hover:scale-105">
@@ -97,7 +97,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Button - Z-index higher than overlay to be clickable */}
                 <button
-                    className="md:hidden text-inherit z-[70] relative w-10 h-10 flex items-center justify-center"
+                    className="md:hidden text-white z-[70] relative w-10 h-10 flex items-center justify-center"
                     onClick={() => setIsOpen(!isOpen)}
                 >
                     <div className={cn("transition-all duration-300 ease-in-out transform", isOpen ? "rotate-90 scale-110" : "rotate-0 scale-100")}>
