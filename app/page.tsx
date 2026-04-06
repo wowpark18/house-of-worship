@@ -68,7 +68,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold mb-3">AI 설교 검색</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-6">
-                "위로가 필요한 날"이라고 물어보세요. 상황에 맞는 말씀을 찾아드립니다.
+                예전 설교 다시 찾아 듣고 싶을때. 키워드로 검색 하세요.
               </p>
               <span className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent)] transition-colors flex items-center">
                 검색해보기 <ArrowRight size={14} className="ml-1" />

@@ -68,7 +68,7 @@ export default function IntroPage() {
                         <div>
                             <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
                                 <span className="w-8 h-px bg-[var(--accent)] inline-block"></span>
-                                연혁
+                                교회 연혁
                             </h3>
                             <div className="text-gray-600 dark:text-gray-400 space-y-4">
                                 <ul className="space-y-4 relative border-l-2 border-gray-200 dark:border-zinc-700 ml-4">
@@ -79,7 +79,7 @@ export default function IntroPage() {
                                     </li>
                                     <li className="pl-6 relative">
                                         <div className="absolute w-3 h-3 bg-gray-300 dark:bg-zinc-600 rounded-full -left-[7px] top-1.5"></div>
-                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2019. 09.</span>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2019. 08.</span>
                                         <span className="text-sm break-keep">House of Worship in NSW 예배시작</span>
                                     </li>
                                     <li className="pl-6 relative">
