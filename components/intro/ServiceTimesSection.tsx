@@ -21,7 +21,7 @@ const services = [
     {
         id: "teens",
         name: "하우 틴즈",
-        time: "11:00 AM",
+        time: "10:30 AM",
         image: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=2669&auto=format&fit=crop", // Teens hanging out
         alt: "HOW Teens"
     },
