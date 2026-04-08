@@ -79,7 +79,7 @@ export default function IntroPage() {
                                     </li>
                                     <li className="pl-6 relative">
                                         <div className="absolute w-3 h-3 bg-gray-300 dark:bg-zinc-600 rounded-full -left-[7px] top-1.5"></div>
-                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2019. 08.</span>
+                                        <span className="font-bold text-gray-900 dark:text-gray-100 block mb-1 break-keep">2019. 08. 23</span>
                                         <span className="text-sm break-keep">House of Worship in NSW 예배시작</span>
                                     </li>
                                     <li className="pl-6 relative">
