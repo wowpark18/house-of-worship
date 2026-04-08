@@ -66,7 +66,7 @@ export const sermons: Sermon[] = [
 ];
 
 // Custom sort order for playlists
-const PLAYLIST_ORDER = ["설교", "설교요약", "찬양 영상", "금요 예배 라이브 다시보기", "하우 키즈 매일 성경", "하우 행사", "선교 영상"];
+const PLAYLIST_ORDER = ["설교", "설교요약", "찬양 영상", "금요 예배 라이브 다시보기", "하우 키즈 매일 성경", "하우 행사", "선교 영상", "매일 기도회"];
 
 export const mockPlaylists: Playlist[] = [
     { id: "mock-1", title: "설교", thumbnail: "", description: "주일 설교 말씀" },
