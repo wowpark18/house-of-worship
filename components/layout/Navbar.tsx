@@ -21,8 +21,8 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "Word", href: "/word" },
         { name: "Intro", href: "/intro" },
+        { name: "Word", href: "/word" },
         { name: "Life", href: "/life" },
         { name: "Grace", href: "/grace" },
     ];
