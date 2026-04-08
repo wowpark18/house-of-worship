@@ -104,8 +104,13 @@ export async function getPlaylists(): Promise<Playlist[]> {
         }
     });
 
+    // Filter playlists to only include those in PLAYLIST_ORDER
+    const filteredPlaylists = playlists.filter(playlist => {
+        return PLAYLIST_ORDER.some(key => playlist.title.includes(key));
+    });
+
     // Sort playlists based on the defined order
-    return playlists.sort((a, b) => {
+    return filteredPlaylists.sort((a, b) => {
         const getOrder = (title: string) => {
             // 1. Exact match
             if (PLAYLIST_ORDER.includes(title)) {
