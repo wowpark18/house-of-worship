@@ -81,32 +81,28 @@ export const mockPlaylists: Playlist[] = [
 export async function getPlaylists(): Promise<Playlist[]> {
     let playlists = await fetchPlaylists();
 
-    if (playlists.length === 0) {
-        playlists = mockPlaylists;
-    } else {
-        // Manually add unlisted/hidden playlists if they are missing
-        const hiddenPlaylists = [
-            {
-                id: "PLKlRRRsns8CBzwZk181HOCTKMgir2JHVq",
-                title: "금요 예배 라이브 다시보기",
-                thumbnail: "", // Will use default placeholder if empty
-                description: "금요 예배 실황"
-            },
-            {
-                id: "PLKlRRRsns8CDsRdx0ntTQ2024A7UpkvSm",
-                title: "하우 키즈 매일 성경",
-                thumbnail: "", // Will use default placeholder if empty
-                description: "어린이 매일 성경"
-            }
-        ];
+    // Manually add unlisted/hidden playlists if they are missing
+    const hiddenPlaylists = [
+        {
+            id: "PLKlRRRsns8CBzwZk181HOCTKMgir2JHVq",
+            title: "금요 예배 라이브 다시보기",
+            thumbnail: "", // Will use default placeholder if empty
+            description: "금요 예배 실황"
+        },
+        {
+            id: "PLKlRRRsns8CDsRdx0ntTQ2024A7UpkvSm",
+            title: "하우 키즈 매일 성경",
+            thumbnail: "", // Will use default placeholder if empty
+            description: "어린이 매일 성경"
+        }
+    ];
 
-        // Add only if not already present
-        hiddenPlaylists.forEach(hidden => {
-            if (!playlists.find(p => p.id === hidden.id)) {
-                playlists.push(hidden);
-            }
-        });
-    }
+    // Add only if not already present
+    hiddenPlaylists.forEach(hidden => {
+        if (!playlists.find(p => p.id === hidden.id)) {
+            playlists.push(hidden);
+        }
+    });
 
     // Sort playlists based on the defined order
     return playlists.sort((a, b) => {
@@ -143,12 +139,7 @@ export async function getSermons(playlistId?: string, pageToken?: string): Promi
     // Try to fetch from YouTube first
     const youtubeData = await fetchVideos(playlistId, pageToken);
 
-    if (youtubeData.items.length > 0) {
-        return youtubeData;
-    }
-
-    // Fallback to mock data
-    return new Promise((resolve) => setTimeout(() => resolve({ items: sermons }), 500));
+    return youtubeData;
 }
 
 export async function getSermonById(id: string): Promise<Sermon | undefined> {
@@ -159,10 +150,7 @@ export async function getSermonById(id: string): Promise<Sermon | undefined> {
 
     // 2. Try fetching directly from YouTube
     const youtubeSermon = await fetchVideoById(id);
-    if (youtubeSermon) return youtubeSermon;
-
-    // 3. Last resort: check mock data directly
-    return sermons.find(s => s.id === id);
+    return youtubeSermon;
 }
 
 export async function getRelatedSermons(currentId: string): Promise<Sermon[]> {
