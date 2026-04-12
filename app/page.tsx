@@ -66,7 +66,7 @@ export default function Home() {
               <div className="h-12 w-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-6 text-[var(--accent)]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">AI 설교 검색</h3>
+              <h3 className="text-xl font-bold mb-3">설교 검색</h3>
               <p className="text-gray-500 dark:text-gray-400 mb-6">
                 예전 설교 다시 찾아 듣고 싶을때. 키워드로 검색 하세요.
               </p>
