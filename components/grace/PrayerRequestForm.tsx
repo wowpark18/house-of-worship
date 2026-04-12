@@ -15,14 +15,27 @@ export default function PrayerRequestForm() {
         content: "entry.1983678150"  // 기도제목 필드 ID
     };
 
-    const handleFormSubmit = () => {
+    const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         setIsSubmitting(true);
-        // 폼이 실제로 전송될 시간을 주기 위해 지연시킵니다.
-        // 바로 상태를 바꾸면 폼이 사라져서 전송이 취소될 수 있습니다.
-        setTimeout(() => {
+
+        const formData = new FormData(e.currentTarget);
+        
+        try {
+            await fetch(GOOGLE_FORM_ACTION_URL, {
+                method: "POST",
+                mode: "no-cors",
+                body: formData,
+            });
+            // no-cors 방식은 응답 내용을 읽을 수 없으므로, 요청이 나가면 성공으로 간주합니다.
             setSubmitted(true);
+        } catch (error) {
+            console.error("Submission error:", error);
+            // 에러가 나더라도 사용자에게는 전송 시도 사실을 알립니다.
+            setSubmitted(true);
+        } finally {
             setIsSubmitting(false);
-        }, 2000);
+        }
     };
 
     if (submitted) {
@@ -49,63 +62,57 @@ export default function PrayerRequestForm() {
     }
 
     return (
-        <>
-            <iframe name="hidden_iframe" id="hidden_iframe" style={{ display: "none" }}></iframe>
-            <form
-                action={GOOGLE_FORM_ACTION_URL}
-                method="POST"
-                target="hidden_iframe"
-                onSubmit={handleFormSubmit}
-                className="space-y-6"
+        <form
+            onSubmit={handleFormSubmit}
+            className="space-y-6"
+        >
+            <div>
+                <label className="block text-sm font-medium mb-1">이름 (익명 가능)</label>
+                <input
+                    name={ENTRY_IDS.name}
+                    type="text"
+                    className="w-full border-b border-gray-300 dark:border-gray-700 bg-transparent py-2 focus:outline-none focus:border-[var(--accent)] transition-colors"
+                    placeholder="홍길동 Or 익명"
+                />
+            </div>
+            <div>
+                <label className="block text-sm font-medium mb-1">연락처 (선택)</label>
+                <input
+                    name={ENTRY_IDS.contact}
+                    type="tel"
+                    className="w-full border-b border-gray-300 dark:border-gray-700 bg-transparent py-2 focus:outline-none focus:border-[var(--accent)] transition-colors"
+                    placeholder="0400 000 000"
+                />
+            </div>
+            <div>
+                <label className="block text-sm font-medium mb-1">기도 제목</label>
+                <textarea
+                    name={ENTRY_IDS.content}
+                    required
+                    className="w-full border border-gray-300 dark:border-gray-700 bg-transparent p-4 h-40 rounded-lg focus:outline-none focus:ring-1 focus:ring-[var(--accent)] transition-all resize-none"
+                    placeholder="어려워하지 마시고 마음을 나눠주세요."
+                ></textarea>
+            </div>
+            <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[var(--accent)] text-white py-3 rounded-lg font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-wait"
             >
-                <div>
-                    <label className="block text-sm font-medium mb-1">이름 (익명 가능)</label>
-                    <input
-                        name={ENTRY_IDS.name}
-                        type="text"
-                        className="w-full border-b border-gray-300 dark:border-gray-700 bg-transparent py-2 focus:outline-none focus:border-[var(--accent)] transition-colors"
-                        placeholder="홍길동 Or 익명"
-                    />
-                </div>
-                <div>
-                    <label className="block text-sm font-medium mb-1">연락처 (선택)</label>
-                    <input
-                        name={ENTRY_IDS.contact}
-                        type="tel"
-                        className="w-full border-b border-gray-300 dark:border-gray-700 bg-transparent py-2 focus:outline-none focus:border-[var(--accent)] transition-colors"
-                        placeholder="0400 000 000"
-                    />
-                </div>
-                <div>
-                    <label className="block text-sm font-medium mb-1">기도 제목</label>
-                    <textarea
-                        name={ENTRY_IDS.content}
-                        required
-                        className="w-full border border-gray-300 dark:border-gray-700 bg-transparent p-4 h-40 rounded-lg focus:outline-none focus:ring-1 focus:ring-[var(--accent)] transition-all resize-none"
-                        placeholder="어려워하지 마시고 마음을 나눠주세요."
-                    ></textarea>
-                </div>
-                <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-[var(--accent)] text-white py-3 rounded-lg font-bold hover:opacity-90 transition-opacity flex justify-center items-center gap-2 disabled:opacity-50 disabled:cursor-wait"
-                >
-                    {isSubmitting ? (
-                        <>
-                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                            </svg>
-                            전송 중...
-                        </>
-                    ) : (
-                        "기도 부탁하기"
-                    )}
-                </button>
-                <p className="text-xs text-center text-gray-400">
-                    * 전송된 내용은 구글 설문지에 안전하게 저장됩니다.
-                </p>
-            </form>
-        </>
+                {isSubmitting ? (
+                    <>
+                        <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        전송 중...
+                    </>
+                ) : (
+                    "기도 부탁하기"
+                )}
+            </button>
+            <p className="text-xs text-center text-gray-400">
+                * 전송된 내용은 구글 설문지에 안전하게 저장됩니다.
+            </p>
+        </form>
     );
 }
