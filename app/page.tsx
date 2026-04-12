@@ -59,23 +59,9 @@ export default function Home() {
 
       {/* Connectivity / Features Grid */}
       <section className="py-24 bg-gray-50 dark:bg-zinc-900 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1: AI Search */}
-            <Link href="/word/search" className="bg-white dark:bg-zinc-800 p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow group block">
-              <div className="h-12 w-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-6 text-[var(--accent)]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3">설교 검색</h3>
-              <p className="text-gray-500 dark:text-gray-400 mb-6">
-                예전 설교 다시 찾아 듣고 싶을때. 키워드로 검색 하세요.
-              </p>
-              <span className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-[var(--accent)] transition-colors flex items-center">
-                검색해보기 <ArrowRight size={14} className="ml-1" />
-              </span>
-            </Link>
-
-            {/* Card 2: Clean Player */}
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Card 1: Clean Player */}
             <Link href="/word" className="bg-white dark:bg-zinc-800 p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow group block">
               <div className="h-12 w-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-6 text-[var(--accent)]">
                 <Play size={24} />
@@ -89,7 +75,7 @@ export default function Home() {
               </span>
             </Link>
 
-            {/* Card 3: Community */}
+            {/* Card 2: Community */}
             <Link href="/life" className="bg-white dark:bg-zinc-800 p-10 rounded-2xl shadow-sm hover:shadow-md transition-shadow group block">
               <div className="h-12 w-12 bg-[var(--accent)]/10 rounded-xl flex items-center justify-center mb-6 text-[var(--accent)]">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
