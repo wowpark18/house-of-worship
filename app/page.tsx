@@ -108,7 +108,10 @@ export default function Home() {
                 />
               </div>
               <div className="w-[1px] h-4 bg-white/30 ml-2 mr-3 mb-2"></div>
-              <h4 className="text-base font-bold tracking-tight mb-1.5">HOUSE OF WORSHIP CHURCH</h4>
+              <div className="flex flex-col">
+                <h4 className="text-base font-bold tracking-tight">HOUSE OF WORSHIP CHURCH</h4>
+                <p className="text-base font-bold tracking-tight text-white/90">뉴카슬 한인교회</p>
+              </div>
             </div>
             <p className="text-gray-400 text-sm">
               18C Horizon Ave, Cameron Park NSW 2285<br />
