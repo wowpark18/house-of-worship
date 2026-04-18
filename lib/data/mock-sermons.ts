@@ -69,13 +69,13 @@ export const sermons: Sermon[] = [
 const PLAYLIST_ORDER = ["설교", "설교요약", "찬양 영상", "금요 예배 라이브 다시보기", "하우 키즈 매일 성경", "하우 행사", "선교 영상", "매일 기도회"];
 
 export const mockPlaylists: Playlist[] = [
-    { id: "mock-1", title: "설교", thumbnail: "", description: "주일 설교 말씀" },
-    { id: "mock-2", title: "설교요약", thumbnail: "", description: "설교 핵심 요약" },
-    { id: "mock-3", title: "찬양 영상", thumbnail: "", description: "예배 찬양 실황" },
+    { id: "PLKlRRRsns8CCULFP0Wa-Bn-G5Hj9Xw_C4", title: "설교", thumbnail: "", description: "주일 설교 말씀" },
+    { id: "PLKlRRRsns8CAx43t9QRj3Cfxg9rLrnXzq", title: "설교요약", thumbnail: "", description: "설교 핵심 요약" },
+    { id: "PLKlRRRsns8CB3pP47aTi2MuWNBN-Ffj5E", title: "찬양 영상", thumbnail: "", description: "예배 찬양 실황" },
     { id: "PLKlRRRsns8CBzwZk181HOCTKMgir2JHVq", title: "금요 예배 라이브 다시보기", thumbnail: "", description: "금요 예배 실황" },
     { id: "PLKlRRRsns8CDsRdx0ntTQ2024A7UpkvSm", title: "하우 키즈 매일 성경", thumbnail: "", description: "어린이 매일 성경" },
-    { id: "mock-4", title: "하우 행사", thumbnail: "", description: "교회 주요 행사" },
-    { id: "mock-5", title: "선교 영상", thumbnail: "", description: "국내외 선교 현장" },
+    { id: "PLKlRRRsns8CBw_VBYBTgqp102p-f9xZdk", title: "하우 행사", thumbnail: "", description: "교회 주요 행사" },
+    { id: "PLKlRRRsns8CB6IX3Bnh-zGYp_RvFw2zoa", title: "선교 영상", thumbnail: "", description: "국내외 선교 현장" },
 ];
 
 export async function getPlaylists(): Promise<Playlist[]> {

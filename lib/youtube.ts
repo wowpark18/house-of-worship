@@ -46,47 +46,56 @@ export async function fetchVideos(playlistId?: string, pageToken?: string): Prom
     const targetPlaylistId = playlistId || CHANNEL_ID.replace(/^UC/, 'UU');
 
     try {
-        let url = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${targetPlaylistId}&part=snippet&maxResults=9`;
-
-        if (pageToken) {
-            url += `&pageToken=${pageToken}`;
-        }
-
+        const url = `https://www.googleapis.com/youtube/v3/playlistItems?key=${API_KEY}&playlistId=${targetPlaylistId}&part=snippet&maxResults=9${pageToken ? `&pageToken=${pageToken}` : ''}`;
+        
+        console.log(`Fetching videos from YouTube: ${targetPlaylistId}`);
         const res = await fetch(url, { next: { revalidate: 3600 } });
-
+        
         if (!res.ok) {
-            console.error(`YouTube API Error: ${res.status} ${res.statusText}`);
+            const errorData = await res.json().catch(() => ({}));
+            console.error(`YouTube API Error: ${res.status} ${res.statusText}`, JSON.stringify(errorData));
             return { items: [] };
         }
 
         const data = await res.json();
         const items = data.items || [];
 
-        const mappedItems = items.map((item: any) => {
-            const snippet = item.snippet;
-            const videoId = snippet.resourceId.videoId;
+        const mappedItems = items
+            .filter((item: any) => item.snippet?.resourceId?.videoId) // Ensure videoId exists
+            .map((item: any) => {
+                const snippet = item.snippet;
+                const videoId = snippet.resourceId.videoId;
+                
+                // Safety check for thumbnails
+                const thumbs = snippet.thumbnails;
+                const thumbnail = thumbs?.maxres?.url || thumbs?.standard?.url || thumbs?.high?.url || thumbs?.medium?.url || thumbs?.default?.url || '';
 
-            return {
-                id: videoId || '',
-                title: snippet.title || 'No Title',
-                series: playlistId ? "Series" : "Latest",
-                preacher: "House Of Worship",
-                date: snippet.publishedAt ? snippet.publishedAt.split('T')[0].replace(/-/g, '.') : '',
-                scripture: "",
-                videoUrl: videoId || '',
-                thumbnail: snippet.thumbnails?.high?.url || snippet.thumbnails?.medium?.url || '',
-                description: snippet.description || '',
-                tags: ["YouTube"],
-            };
-        });
+                const date = new Date(snippet.publishedAt).toLocaleDateString('ko-KR', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit'
+                });
+
+                return {
+                    id: videoId,
+                    title: snippet.title,
+                    series: 'Sermon', // Placeholder or logical mapping
+                    preacher: snippet.videoOwnerChannelTitle || 'House of Worship',
+                    date: date,
+                    scripture: '',
+                    videoUrl: videoId,
+                    thumbnail: thumbnail,
+                    description: snippet.description,
+                    tags: []
+                };
+            });
 
         return {
             items: mappedItems,
             nextPageToken: data.nextPageToken
         };
-
     } catch (error) {
-        console.error("Error fetching videos:", error);
+        console.error('Failed to fetch from YouTube:', error);
         return { items: [] };
     }
 }

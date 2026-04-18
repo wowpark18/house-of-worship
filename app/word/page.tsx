@@ -12,10 +12,21 @@ export const metadata = {
 
 export default async function WordPage({ searchParams }: { searchParams: Promise<{ series?: string }> }) {
     const { series } = await searchParams;
-    const [sermonsData, playlists] = await Promise.all([
-        getSermons(series),
-        getPlaylists()
-    ]);
+    let sermonsData = { items: [], nextPageToken: undefined };
+    let playlists = [];
+
+    try {
+        const [fetchedSermons, fetchedPlaylists] = await Promise.all([
+            getSermons(series),
+            getPlaylists()
+        ]);
+        sermonsData = fetchedSermons;
+        playlists = fetchedPlaylists;
+    } catch (error) {
+        console.error("Failed to load Word page data:", error);
+    }
+
+    const hasSermons = sermonsData.items && sermonsData.items.length > 0;
 
     return (
         <div className="pt-32 min-h-screen bg-gray-50 dark:bg-black px-6 pb-20">
@@ -60,12 +71,26 @@ export default async function WordPage({ searchParams }: { searchParams: Promise
                 </div>
 
                 {/* Client Component for Sermon List & Load More */}
-                <SermonList
-                    key={series || 'all'}
-                    initialSermons={sermonsData.items}
-                    initialNextPageToken={sermonsData.nextPageToken}
-                    series={series}
-                />
+                {hasSermons ? (
+                    <SermonList
+                        key={series || 'all'}
+                        initialSermons={sermonsData.items}
+                        initialNextPageToken={sermonsData.nextPageToken}
+                        series={series}
+                    />
+                ) : (
+                    <div className="text-center py-40 space-y-4">
+                        <div className="text-gray-400 dark:text-gray-600">
+                            <svg className="mx-auto h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 className="text-xl font-medium text-gray-900 dark:text-gray-100 italic">No sermons found.</h3>
+                        <p className="text-gray-500 max-w-sm mx-auto italic">
+                            영상을 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.
+                        </p>
+                    </div>
+                )}
             </div>
         </div>
     );
