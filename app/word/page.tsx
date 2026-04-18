@@ -10,10 +10,13 @@ export const metadata = {
     description: "주일 설교 및 시리즈 말씀 아카이브",
 };
 
+import { Playlist } from "@/lib/youtube";
+import { PaginatedSermons } from "@/lib/data/mock-sermons";
+
 export default async function WordPage({ searchParams }: { searchParams: Promise<{ series?: string }> }) {
     const { series } = await searchParams;
-    let sermonsData = { items: [], nextPageToken: undefined };
-    let playlists = [];
+    let sermonsData: PaginatedSermons = { items: [], nextPageToken: undefined };
+    let playlists: Playlist[] = [];
 
     try {
         const [fetchedSermons, fetchedPlaylists] = await Promise.all([
