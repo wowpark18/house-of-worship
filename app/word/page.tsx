@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import Link from "next/link";
 import { getSermons, getPlaylists } from "@/lib/data/mock-sermons";
 import { cn } from "@/lib/utils";

@@ -104,31 +104,33 @@ export async function getPlaylists(): Promise<Playlist[]> {
         }
     });
 
-    // Filter playlists to only include those in PLAYLIST_ORDER
-    const filteredPlaylists = playlists.filter(playlist => {
-        return PLAYLIST_ORDER.some(key => playlist.title.includes(key));
-    });
-
-    // Sort playlists based on the defined order
-    return filteredPlaylists.sort((a, b) => {
+    // Sort all playlists, prioritizing those in PLAYLIST_ORDER
+    const sortedPlaylists = [...playlists].sort((a, b) => {
         const getOrder = (title: string) => {
             // 1. Exact match
             if (PLAYLIST_ORDER.includes(title)) {
                 return PLAYLIST_ORDER.indexOf(title);
             }
             // 2. Contains match
-            return PLAYLIST_ORDER.findIndex(key => title.includes(key));
+            const index = PLAYLIST_ORDER.findIndex(key => title.includes(key));
+            return index;
         };
 
         const orderA = getOrder(a.title);
         const orderB = getOrder(b.title);
 
+        // If both have an order, sort by it
         if (orderA !== -1 && orderB !== -1) return orderA - orderB;
+        // If only A has an order, A comes first
         if (orderA !== -1) return -1;
+        // If only B has an order, B comes first
         if (orderB !== -1) return 1;
 
+        // Otherwise keep original order (or alphabetical)
         return 0;
     });
+
+    return sortedPlaylists;
 }
 
 // ... (imports)

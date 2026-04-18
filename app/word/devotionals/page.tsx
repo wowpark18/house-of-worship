@@ -7,6 +7,9 @@ export const metadata = {
     description: "매일매일 주시는 생명의 말씀",
 };
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default async function DevotionalsPage() {
     const devotionals = await getDevotionals();
 

@@ -15,7 +15,7 @@ export async function fetchPlaylists(): Promise<Playlist[]> {
 
     try {
         const res = await fetch(
-            `https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet&maxResults=10`,
+            `https://www.googleapis.com/youtube/v3/playlists?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet&maxResults=50`,
             { next: { revalidate: 3600 } }
         );
 

@@ -1,8 +1,14 @@
+import { ArrowRight, ChevronDown, Play } from "lucide-react";
+import { getDevotionals } from "@/lib/data/mock-devotionals";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ChevronDown, Play } from "lucide-react";
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+
+export default async function Home() {
+  const devotionals = await getDevotionals();
+  const todayVerse = devotionals[0];
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -43,10 +49,10 @@ export default function Home() {
             Daily Verse
           </span>
           <blockquote className="text-3xl md:text-5xl font-serif font-medium leading-relaxed text-gray-900">
-            "태초에 말씀이 계시니라 이 말씀이 하나님과 함께 계셨으니 이 말씀은 곧 하나님이시니라"
+            "{todayVerse?.verse}"
           </blockquote>
           <cite className="block text-xl text-gray-500 not-italic font-light">
-            요한복음 1:1
+            {todayVerse?.scripture}
           </cite>
 
           <div className="pt-8">
