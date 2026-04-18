@@ -79,7 +79,7 @@ export const mockPlaylists: Playlist[] = [
 ];
 
 export async function getPlaylists(): Promise<Playlist[]> {
-    let playlists = await fetchPlaylists();
+    let playlists = (await fetchPlaylists()).filter(p => !p.title.includes('하우찬양팀 26'));
 
     // Manually add unlisted/hidden playlists if they are missing
     const hiddenPlaylists = [
